@@ -15,9 +15,9 @@
 * Read features.txt used for column names of X dataset
 * Assign appropriate column names to X, Y and subject datset
 * create combined dataset "har" that includes X,Y and subject
-* Extract measurements on mean and standard deviation of each measurements
 * Read activity_labels.txt
 * Assign activity labels read from activity_labels.txt to Y
+* Extract measurements on mean and standard deviation of each measurements
 * Prepare tidy dataset with the average of each variable for each activity and each subject
 * saves the mean and std into Measurements_MeanAndStd.csv
 * saves the tidy dataset into TidyDataset.csv
