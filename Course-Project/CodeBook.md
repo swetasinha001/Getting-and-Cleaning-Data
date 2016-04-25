@@ -5,11 +5,11 @@
 * Read Training and Test Datasets
 * Read X_train.txt, Y_train.txt, subject_train.txt
       - X_train contains the features data 
-      - y_train contains the activity labels
+      - Y_train contains the activity labels
       - subject_train contains the subject ids
 * Read X_test.txt, Y_test.txt, subject_test.txt
       - X_test contains the features data 
-      - y_test contains the activity labels
+      - Y_test contains the activity labels
       - subject_test contains the subject ids
 * Merge test and train dataset
 * Read features.txt used for column names of X dataset
