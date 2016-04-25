@@ -55,15 +55,15 @@ names(Y) <- "Activity"
 
 har <- cbind(subject, Y,X)
 
-# Extract measurements on mean and standard devaition of each measurements
-
-col_MeanAndStd <- c(grep("std", colnames(har)), grep("mean", colnames(har)))
-Measurements_MeanAndStd <- har[,c(1,2,col_MeanAndStd)]
-
 # Uses descriptive activity names to name the activities in the data set
 # Appropriately labels the data set with descriptive variable names.
 activities <- read.table(paste(dataFolder,"activity_labels.txt",sep="/")) 
 har$Activity <- factor(har$Activity, levels=activities$V1, labels=activities$V2) 
+
+# Extract measurements on mean and standard devaition of each measurements
+
+col_MeanAndStd <- c(grep("std", colnames(har)), grep("mean", colnames(har)))
+Measurements_MeanAndStd <- har[,c(1,2,col_MeanAndStd)]
 
 # Prepare tidy dataset with the average of each variable for each activity and each subject
 tidyDataset <- ddply(Measurements_MeanAndStd, .(SubjectID, Activity), .fun=function(x){ colMeans(x[,-c(1:2)]) })
