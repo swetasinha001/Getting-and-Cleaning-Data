@@ -3,21 +3,21 @@
 * downloads data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 * unzips the downloaded Dataset.zip file
 * Read Training and Test Datasets
-* loads X_train.txt, Y_train.txt, subject_train.txt
-      X_train contains the features data 
-      y_train contains the activity labels
-      subject_train contains the subject ids
-* loads X_test.txt, Y_test.txt, subject_test.txt
-      X_test contains the features data 
-      y_test contains the activity labels
-      subject_test contains the subject ids
+* Read X_train.txt, Y_train.txt, subject_train.txt
+      - X_train contains the features data 
+      - y_train contains the activity labels
+      - subject_train contains the subject ids
+* Read X_test.txt, Y_test.txt, subject_test.txt
+      - X_test contains the features data 
+      - y_test contains the activity labels
+      - subject_test contains the subject ids
 * Merge test and train dataset
-* loads features.txt used for column names of X dataset
+* Read features.txt used for column names of X dataset
 * Assign appropriate column names to X, Y and subject datset
 * create combined dataset "har" that includes X,Y and subject
 * Extract measurements on mean and standard deviation of each measurements
-* loads activity_labels.txt
-* changes the data activity row Y  to use the activity labels read from activity_labels.txt
+* Read activity_labels.txt
+* Assign activity labels read from activity_labels.txt to Y
 * Prepare tidy dataset with the average of each variable for each activity and each subject
 * saves the mean and std into Measurements_MeanAndStd.csv
 * saves the tidy dataset into TidyDataset.csv
